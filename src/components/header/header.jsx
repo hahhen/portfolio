@@ -79,7 +79,7 @@ export default function Header() {
         if (currentDate.getHours() < 12) {
             setTime(currentDate.getHours() + ":" + (currentDate.getMinutes() < 10 ? '0' : '') + currentDate.getMinutes() + "AM")
         } else {
-            setTime((currentDate.getHours() - 12) + ":" + (currentDate.getMinutes() < 10 ? '0' : '') + currentDate.getMinutes() + "PM")
+            setTime((currentDate.getHours() < 13 ? currentDate.getHours() : currentDate.getHours() - 12) + ":" + (currentDate.getMinutes() < 10 ? '0' : '') + currentDate.getMinutes() + "PM")
         }
         setDate(currentDate.toDateString())
     }

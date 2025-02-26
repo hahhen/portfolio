@@ -17,10 +17,9 @@ import { cn } from "../../lib/utils";
 import React from "react";
 import { setStateBgVideo } from "@/components/desktop/backgroundvideo";
 
-export default function Folder({ bgVideo, id, slug, items, title, cover, icon }) {
-    console.log('rendered')
+export default function Folder({ bgVideo, slug, items, title, cover, icon }) {
     return (
-        <DesktopApp id={id} slug={slug} title={title} icon={icon}>
+        <DesktopApp slug={slug} title={title} icon={icon}>
             <ScrollArea className={"h-96"}>
                 <div className="grid grid-cols-3 grid-flow-row gap-4">
                     {items.map((item, i) => (
