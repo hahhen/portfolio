@@ -48,7 +48,7 @@ export default function ProjectsFolder({ slug, title, icon }) {
     const { data: categories, isLoading: isCategoriesLoading } = useQuery({ queryKey: ['categories'], queryFn: getCategories })
 
     const [projects, setProjects] = React.useState(preprojects)
-    const [filterByOr, setFilterByOr] = React.useState(false)
+    const [filterByOr, setFilterByOr] = React.useState(true)
 
     useEffect(() => {
         if (preprojects) {
@@ -70,7 +70,7 @@ export default function ProjectsFolder({ slug, title, icon }) {
     return (
         <DesktopApp className={"w-[700px] h-[500px] overflow-hidden"} slug={slug} title={title} icon={icon}>
             <SidebarProvider>
-                <Sidebar variant="floating" className="mt-6 h-[100%-20px]">
+                <Sidebar variant="floating" className="mt-4 h-[100%-20px]">
                     <SidebarContent className="no-scrollbar px-2 py-1">
                         <div className="flex items-center gap-2">
                             <Button variant="secondary" className="w-8 h-8" onClick={() => setFilterByOr(!filterByOr)}>
@@ -100,11 +100,11 @@ export default function ProjectsFolder({ slug, title, icon }) {
                 </Sidebar>
                 <ScrollArea className={"h-[475px]"}>
                     <SidebarTrigger />
-                    <div className="p-4">
+                    <div className="px-4 flex flex-col gap-4">
                         {isProjectLoading ? <p>Loading...</p>
                             :
                             projects?.map((project, i) => (
-                                <div key={project.id} className="rounded-t-lg rounded-b-none bg-secondary overflow-hidden">
+                                <div key={project.id} className="rounded-lg rounded-b-none bg-secondary overflow-hidden">
                                     <div>
                                         <Image alt="Banner" src={project.banner} className="w-full aspect-[45/9] object-cover" width={400} height={400} />
                                     </div>
