@@ -33,6 +33,7 @@ export default function ProjectsFolder({ slug, title, icon }) {
         let { data, error } = await supabase
             .from('project')
             .select("*, tag(name)")
+            .order("date", { ascending: false })
         return data
     }
 
@@ -104,7 +105,7 @@ export default function ProjectsFolder({ slug, title, icon }) {
                         {isProjectLoading ? <p>Loading...</p>
                             :
                             projects?.map((project, i) => (
-                                <div key={project.id} className="rounded-lg rounded-b-none bg-secondary overflow-hidden">
+                                <div key={project.id} className="rounded-lg bg-secondary overflow-hidden">
                                     <div>
                                         <Image alt="Banner" src={project.banner} className="w-full aspect-[45/9] object-cover" width={400} height={400} />
                                     </div>
