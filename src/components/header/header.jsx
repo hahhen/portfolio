@@ -17,57 +17,18 @@ import Link from "next/link"
 import { useEffect, useState } from "react";
 import i18next from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
+import { en } from "@/locales/en";
+import { jp } from "@/locales/jp";
+import { pt } from "@/locales/pt";
 
 i18next
     .use(initReactI18next)
     .init({
         lng: "en",
         resources: {
-            en: {
-                translation: {
-                    "about": "About",
-                    "language": "Language",
-                    "restart": "Restart",
-                    "systeminfo": "System Information",
-                    "os": "Operational System",
-                    "build": "Build Number",
-                    "file": "File",
-                    "share": "Share",
-                    "print": "Print",
-                    "open": "Open",
-                    "aboutmetext": "I&apos;m 17 years old, a developer and currently studying Systems Development along with High School at the Etec of Praia Grande. After graduating, I plan on taking Computer Science. I&apos;m proactive, creative and self-taught.\nIn my free time, I enjoy to study, program and play videogames.\nApart from programming, I have a particular interest in architecture, classical music and the japanese culture."
-                }
-            },
-            pt: {
-                translation: {
-                    "about": "Sobre",
-                    "language": "Idioma",
-                    "restart": "Reiniciar",
-                    "systeminfo": "Informações do Sistema",
-                    "os": "Sistema Operacional",
-                    "build": "Número da Build",
-                    "file": "Arquivo",
-                    "share": "Compartilhar",
-                    "print": "Imprimir",
-                    "open": "Abrir",
-                    "aboutmetext": "Possuo 17 anos, sou desenvolvedor e estou atualmente cursando Desenvolvimento de Sistemas na Etec de Praia Grande junto ao Ensino Médio. Após a conclusão, pretendo cursar Ciências da Computação. Sou proativo, criativo e autodidata.\nMeu passatempos são estudar, programar e jogar, às vezes.\nAlém da programação, possuo interesse em arquitetura, música clássica e cultura japonesa."
-                }
-            },
-            jp: {
-                translation: {
-                    "about": "アバウト",
-                    "language": "語",
-                    "restart": "再起動する",
-                    "systeminfo": "システムインフォメーション",
-                    "os": "運用システム",
-                    "build": "ビルド番号",
-                    "file": "ファイル",
-                    "share": "シェア",
-                    "print": "印刷する",
-                    "open": "開く",
-                    "aboutmetext": "I&apos;m 17 years old, a developer and currently studying Systems Development along with High School at the Etec of Praia Grande. After graduating, I plan on taking Computer Science. I&apos;m proactive, creative and self-taught.\nIn my free time, I enjoy to study, program and play videogames.\nApart from programming, I have a particular interest in architecture, classical music and the japanese culture."
-                }
-            }
+            en,
+            pt,
+            jp
         }
     })
 

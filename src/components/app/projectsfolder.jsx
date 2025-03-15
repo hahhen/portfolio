@@ -17,9 +17,6 @@ import {
     SidebarGroup,
     SidebarGroupContent,
     SidebarGroupLabel,
-    SidebarMenu,
-    SidebarMenuButton,
-    SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
@@ -69,7 +66,7 @@ export default function ProjectsFolder({ slug, title, icon }) {
     }, [selectedTags, preprojects, filterByOr])
 
     return (
-        <DesktopApp className={"w-[700px] h-[500px] overflow-hidden"} slug={slug} title={title} icon={icon}>
+        <DesktopApp className={"w-[900px] h-[600px] overflow-hidden"} x={-200} y={-300} slug={slug} title={title} icon={icon}>
             <SidebarProvider>
                 <Sidebar variant="floating" className="mt-4 h-[100%-20px]">
                     <SidebarContent className="no-scrollbar px-2 py-1">
@@ -99,8 +96,8 @@ export default function ProjectsFolder({ slug, title, icon }) {
                         ))}
                     </SidebarContent>
                 </Sidebar>
-                <ScrollArea className={"h-[475px]"}>
-                    <SidebarTrigger />
+                <ScrollArea className={"h-[575px]"}>
+                    <SidebarTrigger className="ml-2 mb-2 mt-2" />
                     <div className="px-4 flex flex-col gap-4">
                         {isProjectLoading ? <p>Loading...</p>
                             :
@@ -128,7 +125,7 @@ export default function ProjectsFolder({ slug, title, icon }) {
                                         </div>
                                         <div className="flex gap-2">
                                             {project.url.map((url, i) => (
-                                                <Link className="hover:underline leading-7" key={i} href={url.url}>
+                                                <Link className="underline leading-7" key={i} href={url.url}>
                                                     {url.name}
                                                 </Link>
                                             ))}

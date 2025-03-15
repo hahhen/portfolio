@@ -5,6 +5,9 @@ import DesktopApp from '@/components/app/desktopapp'
 import { cookies } from "next/headers";
 import { createClient } from '@/utils/supabase/server'
 import ProjectsFolder from '@/components/app/projectsfolder';
+import { ScrollArea } from '../ui/scroll-area';
+import AboutMe from '../app/aboutme';
+import FolderFolder from '@/components/app/folderfolder';
 
 export default async function Desktop() {
     const cookieStore = cookies()
@@ -30,38 +33,27 @@ export default async function Desktop() {
                 <ProjectsFolder slug={"projects"} icon={"/folder.png"} title={"PROJECTS"} />
             </div>
             <div className="grid grid-rows-3 z-10 grid-flow-col gap-4">
-                {album?.map((album) => (
-                    <Folder key={album.id} bgVideo={album.bgvideo} slug={album.slug} icon="/folder.png" cover={album.cover} items={song.filter(song => song.albumid == album.id)} title={album.title} />
-                ))}
-                <DesktopApp slug={"aboutme"} title="ABOUTME" icon={"/text.png"} size={40}>
-                    <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-                      About me
-                    </h2>
-                    <p className="leading-7 [&:not(:first-child)]:mt-6">
-                        My name is Arthur Martins Pereira, currently based in São Paulo, Brazil.
-                    </p>
-                    <p className="leading-7 [&:not(:first-child)]:mt-6">
-                        I&lsquo;m an 18 years old developer currently taking Computer Science at University of São Paulo. I&lsquo;m proactive, creative and self-taught.
-                    </p>
-                    <p className="leading-7 [&:not(:first-child)]:mt-6">    
-                        In my free time, I like to study, program and play videogames.
-                    </p>
-                    <p className="leading-7 [&:not(:first-child)]:mt-6">    
-                        Apart from programming, I have a particular interest in architecture, classical music and the japanese culture.
-                    </p>
-                    <p className="leading-7 [&:not(:first-child)]:mt-6">    
-                        Some of my skills are:
-                        HTML, CSS, JavaScript, React.js, Next.js, PostgreSQL, MySQL, PHP, AWS, Azure and TailwindCSS
-                    </p>
-                   <p className="leading-7 [&:not(:first-child)]:mt-6">     
-                        I&lsquo;m also experienced in using tools such as:
-                        Photoshop, After Effects, Premiere and Figma
-                   </p>
-                   <p className="leading-7 [&:not(:first-child)]:mt-6">     
-                        With these, I am fully able to imagine, design, develop and integrate incredible projects and follow what I am passionate about: computing and art, with these not being apart from each other.
-                    </p>
-                </DesktopApp>
+                <FolderFolder slug={"music"} icon={"/folder.png"} title={"MUSIC"}>
+                    {album?.map((album) => (
+                        <Folder key={album.id} bgVideo={album.bgvideo} slug={album.slug} icon="/folder.png" cover={album.cover} items={song.filter(song => song.albumid == album.id)} title={album.title} />
+                    ))}
+                </FolderFolder>
+                <FolderFolder slug="certificates" icon="/folder.png" title="CERTIFICATIONS">
+                    <Link href="https://link.byarthur.me/jap" target='_blank' className='flex gap-1 flex-col items-center'>
+                        <Image alt="Contact" src="/text.png" width={40} height={40} />
+                        <span className="bg-white text-center">JLPT N4</span>
+                    </Link>
+                    <Link href="https://link.byarthur.me/eng" target='_blank' className='flex gap-1 flex-col items-center'>
+                        <Image alt="Contact" src="/text.png" width={40} height={40} />
+                        <span className="bg-white text-center">NF SET C2 PROFICIENT</span>
+                    </Link>
+                    <Link href="https://link.byarthur.me/gitcert" target='_blank' className='flex gap-1 flex-col items-center'>
+                        <Image alt="Contact" src="/text.png" width={40} height={40} />
+                        <span className="bg-white text-center">GITHUB FOUNDATIONS</span>
+                    </Link>
+                </FolderFolder>
+                <AboutMe />
             </div>
-        </div>
+        </div >
     )
 }
