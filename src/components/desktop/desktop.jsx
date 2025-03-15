@@ -39,6 +39,7 @@ export default async function Desktop() {
                     </h2>
                     <p className="leading-7 [&:not(:first-child)]:mt-6">
                         My name is Arthur Martins Pereira, currently based in São Paulo, Brazil.
+                    </p>
                     <p className="leading-7 [&:not(:first-child)]:mt-6">
                         I'm an 18 years old developer currently taking Computer Science at University of São Paulo. I'm proactive, creative and self-taught.
                     </p>
