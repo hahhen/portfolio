@@ -20,6 +20,10 @@ export const en = {
             "p5": "Some of my skills are: HTML, CSS, JavaScript, React.js, Next.js, PostgreSQL, MySQL, PHP, AWS, Azure and TailwindCSS",
             "p6": "I'm also experienced in using tools such as: Photoshop, After Effects, Premiere and Figma",
             "p7": "With these, I am fully able to imagine, design, develop and integrate incredible projects and follow what I am passionate about: computing and art, with these not being apart from each other."
-        }  
+        },
+        "newtab": "Open in new tab",
+        "download": "Download",
+        "loading": "Loading",
+        
     }
 }

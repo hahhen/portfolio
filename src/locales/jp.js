@@ -20,6 +20,9 @@ export const jp = {
             "p5": "僕のスキルの一部は： HTML, CSS, JavaScript, React.js, Next.js, PostgreSQL, MySQL, PHP, AWS, Azure and TailwindCSS",
             "p6": "Photoshop, After Effects, Premiere and Figma",
             "p7": "それで最高なプロジェックとを完全に想像したりデザインしたり開発したり統合したりできます。それとも情熱を持っていることに従えます：コンピューティングと美術、別ではありません。"
-        }
+        },
+        "newtab": "新しいタブで開く",
+        "download": "ダウンロード",
+        "loading": "読み込み中",
     }
 }
