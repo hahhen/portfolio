@@ -41,7 +41,7 @@ export default async function Desktop() {
                         My name is Arthur Martins Pereira, currently based in São Paulo, Brazil.
                     </p>
                     <p className="leading-7 [&:not(:first-child)]:mt-6">
-                        I'm an 18 years old developer currently taking Computer Science at University of São Paulo. I'm proactive, creative and self-taught.
+                        I&lsquo;m an 18 years old developer currently taking Computer Science at University of São Paulo. I&lsquo;m proactive, creative and self-taught.
                     </p>
                     <p className="leading-7 [&:not(:first-child)]:mt-6">    
                         In my free time, I like to study, program and play videogames.
@@ -54,7 +54,7 @@ export default async function Desktop() {
                         HTML, CSS, JavaScript, React.js, Next.js, PostgreSQL, MySQL, PHP, AWS, Azure and TailwindCSS
                     </p>
                    <p className="leading-7 [&:not(:first-child)]:mt-6">     
-                        I'm also experienced in using tools such as:
+                        I&lsquo;m also experienced in using tools such as:
                         Photoshop, After Effects, Premiere and Figma
                    </p>
                    <p className="leading-7 [&:not(:first-child)]:mt-6">     
